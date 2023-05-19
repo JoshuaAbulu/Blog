@@ -17,7 +17,7 @@ const Blog = () => {
 
     useEffect(() => {
         const fetchBlogs = async () => {
-            const response = await fetch('https://joshuaabulu-api.onrender.com/api/blogs')
+            const response = await fetch('/api/blogs')
             const json = await response.json()
 
             if(response.ok){
