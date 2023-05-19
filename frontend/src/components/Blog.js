@@ -19,12 +19,16 @@ const Blog = () => {
         const fetchBlogs = async () => {
             const response = await fetch('/api/blogs')
             const json = await response.json()
+            console.log(json);
 
             if(response.ok){
                 dispatch({
                     type: 'get blogs',
                     payload: json
                 })
+            }
+            if(!response.ok){
+                console.log('error fetching blogs');
             }
         }
 
