@@ -3,8 +3,11 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const blogRoutes = require('./routes/blogRoutes')
 const userRoutes = require('./routes/userRoutes')
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
 
 app.use(express.json())
 app.use('/api/blogs', blogRoutes)
