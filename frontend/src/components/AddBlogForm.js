@@ -15,7 +15,7 @@ const AddBlogForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const response = await fetch('/api/blogs', {
+        const response = await fetch('https://joshuaabulu-api.onrender.com/api/blogs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

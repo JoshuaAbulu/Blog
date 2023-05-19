@@ -15,7 +15,7 @@ const BlogDetails = ({blog}) => {
     
 
     const handleClick = async () => {
-        const response = await fetch(`/api/blogs/${blog._id}`, {
+        const response = await fetch(`https://joshuaabulu-api.onrender.com/api/blogs/${blog._id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

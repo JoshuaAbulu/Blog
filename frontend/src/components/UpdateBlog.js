@@ -19,7 +19,7 @@ const UpdateBlog = () => {
 
 useEffect(() => {
     const fetchBlog = async () => {
-        const response = await fetch(`/api/blogs/${id}`)
+        const response = await fetch(`https://joshuaabulu-api.onrender.com/api/blogs/${id}`)
         const json = await response.json()
         
 
@@ -53,7 +53,7 @@ useEffect(() => {
 const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const response = await fetch(`/api/blogs/${blog._id}`, {
+    const response = await fetch(`https://joshuaabulu-api.onrender.com/api/blogs/${blog._id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
