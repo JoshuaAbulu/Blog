@@ -11,6 +11,7 @@ const BlogExtended = () => {
     const {user} = useAuthContext()
     const {dispatch, blogs} = useBlogContext()
     const [blog, setBlog] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
 
     const {id} = useParams()
     
@@ -22,6 +23,7 @@ const BlogExtended = () => {
 
             if(response.ok){
                 setBlog(json)
+                setIsLoading(false)
             }
             if(!response.ok){
                 console.log('error fetching blog');
@@ -59,6 +61,14 @@ const BlogExtended = () => {
 
     return ( 
         <div className="flex flex-col items-center py-10">
+
+            {
+                isLoading && 
+                <div className="text-3xl font-black">
+                    Loading...
+                </div>
+            }
+
             { blog && 
             <div className="w-4/5">
                 <h1 className="text-4xl font-black py-8">{blog.title}</h1>

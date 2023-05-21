@@ -33,12 +33,12 @@ function App() {
 
       {nav &&
         <div>
-        <Nav />
+        <Nav nav={{nav, setNav}}/>
       </div>}
 
       <div className=''>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />}/>
           <Route path="/blog/login" element={!user? <LoginForm /> : <Navigate to='/blog'/>}/>
           <Route path="/blog/signup" element={!user? <SignupForm /> : <Navigate to='/blog'/>}/>

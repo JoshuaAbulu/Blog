@@ -94,7 +94,7 @@ if (blog === null) {
   }
 
     return ( 
-        <div className="w-4/5 py-8">
+    <div className="w-4/5 p-8">
             {blog &&
         <form onSubmit={handleSubmit} className="">
             <h1 className="text-2xl font-black">Update a Blog</h1>

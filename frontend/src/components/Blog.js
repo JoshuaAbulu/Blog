@@ -15,6 +15,7 @@ const Blog = () => {
     const {user} = useAuthContext()
     const [category, setCategory] = useState('All')
     const [filteredBlogs, setFilteredBlogs] = useState(blogs)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         const fetchBlogs = async () => {
@@ -27,6 +28,7 @@ const Blog = () => {
                     type: 'get blogs',
                     payload: json
                 })
+                setIsLoading(false)
             }
             if(!response.ok){
                 console.log('error fetching blogs');
@@ -88,12 +90,12 @@ const Blog = () => {
                 }
             </div>
 
-            <div className=' bg-green-700 h-60 w-full self-center text-white font-extrabold flex flex-col items-center px-16 gap-6 justify-center mb-12'>
-                <h2 className="text-3xl"><strong> JOSHUA'S BLOG </strong></h2>
-                <p className="text-xl text-justify">This is where I pour out all my thoughts. I hope you have an exciting journey through my mind.</p>
+            <div className=' bg-green-700 p-4 w-full text-white font-extrabold flex flex-col items-center gap-6 justify-center mb-12'>
+                <h2 className="text-3xl text-center w-4/5"><strong> JOSHUA'S BLOG </strong></h2>
+                <p className="text-xl text-justify w-4/5">This is where I pour out all my thoughts. I hope you have an exciting journey through my mind.</p>
             </div>
 
-            <form className=" self-center flex gap-4 w-1/2">
+            <form className=" self-center flex justify-center gap-4 w-4/5">
                 <div className=" flex items-center text-lg font-extrabold">
                     <span>Select a category: </span>
                 </div>
@@ -116,6 +118,13 @@ const Blog = () => {
                         <option value="Other">Other</option>
                     </select>
             </form>
+
+            {
+                isLoading && 
+                <div className="text-3xl font-black flex justify-center text-center">
+                    Loading...
+                </div>
+            }
 
             <div className="flex flex-col gap-4 items-center">
                 {filteredBlogs && filteredBlogs.map((blog) => (

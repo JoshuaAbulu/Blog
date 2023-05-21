@@ -12,6 +12,9 @@
 } */
 
 .markdown > * { all: revert; }
+.markdown {
+    line-height: normal;
+}
 
 .bg-image{
     background:  url('./images/me.jpg');
