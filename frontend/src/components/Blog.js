@@ -6,6 +6,7 @@ import AddBlogForm from "./AddBlogForm";
 import { useAuthContext } from "../hooks/useAuthContext";
 import { Link } from "react-router-dom";
 import me from '../images/me.jpg'
+import Footer from "./Footer";
 
 const Blog = () => {
 
@@ -59,7 +60,7 @@ const Blog = () => {
       };
 
     return (
-        <div className="flex flex-col py-8">
+        <div className="flex flex-col pt-8">
             <div className="flex flex-col w-4/5 self-center">
                     {
                         user &&
@@ -87,14 +88,17 @@ const Blog = () => {
                 }
             </div>
 
-            <div className='bg-image h-60 w-full self-center text-white font-extrabold flex flex-col items-center px-16 gap-6 justify-center mb-12'>
+            <div className=' bg-green-700 h-60 w-full self-center text-white font-extrabold flex flex-col items-center px-16 gap-6 justify-center mb-12'>
                 <h2 className="text-3xl"><strong> JOSHUA'S BLOG </strong></h2>
                 <p className="text-xl text-justify">This is where I pour out all my thoughts. I hope you have an exciting journey through my mind.</p>
             </div>
 
-                <form className=" self-center w-1/2">
+            <form className=" self-center flex gap-4 w-1/2">
+                <div className=" flex items-center text-lg font-extrabold">
+                    <span>Select a category: </span>
+                </div>
                 <select 
-                    className="border-2 border-black w-full h-12 text-lg p-2 cursor-pointer"
+                    className="border-2 border-black w-3/4 h-12 text-lg p-2 cursor-pointer"
                     name="category"
                     value={category}
                     onChange={handleSelectCategory}
@@ -111,12 +115,16 @@ const Blog = () => {
                         <option value="Math">Math</option>
                         <option value="Other">Other</option>
                     </select>
-                </form>
+            </form>
 
             <div className="flex flex-col gap-4 items-center">
                 {filteredBlogs && filteredBlogs.map((blog) => (
                     <BlogDetails key={blog._id} blog={blog}/>
                 ))}
+            </div>
+            
+            <div className=" mt-4">
+                <Footer />
             </div>
         </div>
      );

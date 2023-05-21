@@ -20,3 +20,13 @@
     background-position: center;
     background-position-y: -150px;
 }
+
+.dp{
+    background:  url('./images/me.jpg');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* background-position: center; */
+    /* background-position-y: -120px;
+    background-position-x: -400px; */
+}
+
