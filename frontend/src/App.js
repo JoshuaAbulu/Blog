@@ -9,6 +9,8 @@ import BlogExtended from "./components/BlogExtended";
 import UpdateBlog from "./components/UpdateBlog";
 import Footer from "./components/Footer";
 import { useState } from "react";
+import Projects from "./components/Projects";
+import About from "./components/About";
 
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
   return (
     <div className={nav ? "h-screen overflow-hidden App font-lora" : "App font-lora"}>
 
-      <div className={nav ? ' pt-8 flex justify-center bg-green-700' : 'pt-8 flex justify-center'}>
+      <div className='py-8 bg-green-700 flex justify-center'>
         <svg onClick={showNav} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-12 h-12 cursor-pointer">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -39,6 +41,8 @@ function App() {
       <div className=''>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/works" element={<Projects />} />
+          <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />}/>
           <Route path="/blog/login" element={!user? <LoginForm /> : <Navigate to='/blog'/>}/>
           <Route path="/blog/signup" element={!user? <SignupForm /> : <Navigate to='/blog'/>}/>
