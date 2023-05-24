@@ -69,6 +69,36 @@ input, select, button{
 .img{
     animation: img ease-in-out 1s forwards;
 }
+.work{
+    animation: work ease-in-out 2s forwards;
+}
+.work2{
+    animation: work2 ease-in-out 2s forwards;
+}
+
+@keyframes work {
+    0%{
+        transform: translateX(120%);
+    }
+    90%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes work2 {
+    0%{
+        transform: translateX(-120%);
+    }
+    90%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
 
 @keyframes img{
     0%{
