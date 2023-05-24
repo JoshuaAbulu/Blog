@@ -48,6 +48,10 @@
     }
 } */
 
+input, select, button{
+    border-radius: 16px;
+}
+
 .details{
     animation: fade ease-in-out 3s;
 }
@@ -61,6 +65,18 @@
 }
 .nav{
     animation: nav ease-in-out 0.5s forwards;
+}
+.img{
+    animation: img ease-in-out 1s forwards;
+}
+
+@keyframes img{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 @keyframes fade{

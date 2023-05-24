@@ -1,7 +1,7 @@
 const blogModel = require('../models/blogModel')
 
 const getBlogs = async (req, res) => {
-    const blogs = await blogModel.find({})
+    const blogs = await blogModel.find({}).sort({createdAt: -1})
     res.status(200).json(blogs)
 }
 

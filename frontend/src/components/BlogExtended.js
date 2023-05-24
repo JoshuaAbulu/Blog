@@ -60,7 +60,7 @@ const BlogExtended = () => {
 
 
     return ( 
-        <div className="flex flex-col items-center py-10">
+        <div className="flex flex-col items-center py-10 bg-black opacity-80 text-white">
 
             {
                 isLoading && 

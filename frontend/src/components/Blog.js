@@ -62,7 +62,7 @@ const Blog = () => {
       };
 
     return (
-        <div className="flex flex-col pt-8">
+        <div className="flex flex-col pt-8 bg-black opacity-80 text-white">
             <div className="flex flex-col w-4/5 self-center">
                     {
                         user &&
@@ -95,12 +95,12 @@ const Blog = () => {
                 <p className="text-xl text-justify w-4/5">This is where I pour out all my thoughts. I hope you have an exciting journey through my mind.</p>
             </div>
 
-            <form className=" self-center flex justify-center gap-4 w-4/5">
+            <form className=" self-center flex flex-col items-center w-4/5 pb-4">
                 <div className=" flex items-center text-lg font-extrabold">
                     <span>Select a category: </span>
                 </div>
                 <select 
-                    className="border-2 border-black w-3/4 h-12 text-lg p-2 cursor-pointer"
+                    className="border-2 border-black w-3/4 h- text-lg p-2 cursor-pointer text-black"
                     name="category"
                     value={category}
                     onChange={handleSelectCategory}

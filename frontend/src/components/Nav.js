@@ -3,9 +3,9 @@ import me from '../images/me.jpg'
 
 const Nav = ({nav}) => {
     return ( 
-        <div className='bg-green-700 pb-48 w-screen h-screen absolute z-10 flex flex-col justify-center gap-12 nav'>
+        <div className='bg-green-700 pb-24 w-screen h-screen overflow-hidden absolute z-10 flex flex-col justify-center gap-12 nav'>
             <div className='flex justify-center items-center'>
-                <div className=' h-48 w-48 rounded-full bg-white dp'>
+                <div className=' h-48 w-48 rounded-full bg-white dp img'>
                     {/* <img src={me} alt="me" className='' /> */}
                 </div>
             </div>
