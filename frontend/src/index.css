@@ -33,3 +33,61 @@
     background-position-x: -400px; */
 }
 
+/* .test1{
+    animation: test1 ease-in-out 3s forwards;
+}
+@keyframes test1{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        color: brown;
+        transform: translateX(0);
+    }
+} */
+
+.details{
+    animation: fade ease-in-out 3s;
+}
+
+.burger{
+    animation: blink ease-in-out 3s alternate;
+    animation-iteration-count: 3;
+}
+.burger:hover{
+    animation-play-state: paused;
+}
+.nav{
+    animation: nav ease-in-out 0.5s forwards;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes blink{
+    50%{
+        width: 60px;
+        height: 60px;
+    }
+    100%{
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@keyframes nav{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

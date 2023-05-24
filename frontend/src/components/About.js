@@ -1,11 +1,12 @@
 import me2 from '../images/me2.jpg'
+import Footer from './Footer';
 
 const About = () => {
     return ( 
-        <div className="all flex flex-col items-center gap-8 py-4">
+        <div className="all flex flex-col items-center gap-8 pt-4">
             <div className="pic-and-bio grid grid-cols-4 w-4/5">
                 <div className="pic col-span-1 flex justify-center items-center">
-                        <img src={me2} alt="me" className='w-full h-full' />
+                        <img src={me2} alt="me" className='w-full h-2/4' />
                 </div>
                 <div className="bio col-span-3 flex flex-col justify-center px-4 text-justify text-lg font-black gap-2">
                     <h2 className='underline'>
@@ -69,6 +70,11 @@ const About = () => {
                         <li>Video games</li>
                     </ul>
                 </div>
+
+            </div>
+
+            <div className='w-full'>
+                <Footer />
             </div>
         </div>
      );

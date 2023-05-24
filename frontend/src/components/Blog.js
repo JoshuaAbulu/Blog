@@ -120,9 +120,10 @@ const Blog = () => {
             </form>
 
             {
-                isLoading && 
-                <div className="text-3xl font-black flex justify-center text-center">
-                    Loading...
+                isLoading && !blogs && 
+                <div className="text-2xl font-black flex flex-col items-center text-center py-4">
+                    Loading blogs...
+                    <span className="text-lg italic font-extrabold">This might take few seconds</span>
                 </div>
             }
 
@@ -132,7 +133,7 @@ const Blog = () => {
                 ))}
             </div>
             
-            <div className=" mt-4">
+            <div className="">
                 <Footer />
             </div>
         </div>

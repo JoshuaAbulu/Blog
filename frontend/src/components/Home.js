@@ -1,7 +1,7 @@
 const Home = () => {
     return ( 
         <div className="h-screen max-w-screen flex justify-center bg-black text-white opacity-80 items-center">
-            <div className="w-2/3 flex flex-col pb-48">
+            <div className="w-2/3 flex flex-col pb-48 details">
                 <h1 className="text-3xl font-black">
                     {`<JOSHUA ABULU/>`}
                 </h1>
