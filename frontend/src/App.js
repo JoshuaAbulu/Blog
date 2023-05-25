@@ -11,6 +11,9 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Dictionary from "./components/ProjectPages/Dictionary";
+import BlogProject from "./components/ProjectPages/BlogProject";
+import Joses from "./components/ProjectPages/Joses";
 
 
 function App() {
@@ -48,6 +51,9 @@ function App() {
           <Route path="/blog/signup" element={!user? <SignupForm /> : <Navigate to='/blog'/>}/>
           <Route path="/blog/:id" element={<BlogExtended />}/>
           <Route path="/blog/update/:id" element={<UpdateBlog />}/>
+          <Route path="/works/dictionary" element={<Dictionary />}/>
+          <Route path="/works/blog" element={<BlogProject />}/>
+          <Route path="/works/joses" element={<Joses />}/>
         </Routes>
       </div>
 
